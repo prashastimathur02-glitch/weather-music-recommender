@@ -24,16 +24,19 @@ A web application that recommends music based on real-time weather conditions us
 - AWS deployment
 - 
 ## Screenshots
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Example 1 - Bhopal
+### Example 1 - Delhi
 ![City1](screenshots/city1.png)
 
-###  Example 2-Hyderabad
+###  Example 2-Jhansi
 ![City2](screenshots/city2.png)
 
-### Example 3-Delhi
+### Example 3-Hyderabad
+![City3](screenshots/city3.png)
+
+### Example 4-Bhopal
+![City3](screenshots/city3.png)
+
+### Example 5-Osaka
 ![City3](screenshots/city3.png)
 
 ## Author
