@@ -15,6 +15,13 @@ A web application that recommends music based on real-time weather conditions us
 - CSS
 - JavaScript
 - OpenWeather API
+   
+##Future Improvements
+- Weather icons from OpenWeather API
+- Save favorite city (Local Storage)
+- Mobile optimization
+- AWS deployment
+- Live Spotify API integration
 
 ## Screenshots
 ### Example 1 - Delhi
