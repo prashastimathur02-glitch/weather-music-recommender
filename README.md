@@ -16,13 +16,6 @@ A web application that recommends music based on real-time weather conditions us
 - JavaScript
 - OpenWeather API
 
-## Future Improvements
-- Day/Night detection
-- Dynamic backgrounds
-- Weather icons
-- Spotify/YouTube playlist integration
-- AWS deployment
-- 
 ## Screenshots
 ### Example 1 - Delhi
 ![City1](screenshots/city1.png)
