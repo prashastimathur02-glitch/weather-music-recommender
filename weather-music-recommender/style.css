@@ -61,3 +61,25 @@ button:hover {
   border-radius: 15px;
   min-height: 80px;
 }
+.playlist-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.playlist-buttons a {
+  text-decoration: none;
+  color: white;
+  background: #7c5cff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.playlist-buttons a:hover {
+  background: #5f45d6;
+  transform: scale(1.05);
+}
