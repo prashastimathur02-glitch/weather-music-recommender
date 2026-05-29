@@ -1,13 +1,14 @@
 # Weather Music Recommender 🎵
 
 A web application that recommends music based on real-time weather conditions using the OpenWeather API.
-
-## Features
-- Search weather by city
-- Real-time weather data
-- Temperature display
-- Music recommendations based on weather
-- Responsive UI
+ ## Features
+- Real-time weather data using OpenWeather API
+- Weather-based music recommendations
+- Day and Night detection
+- Dynamic weather backgrounds
+- Spotify playlist integration
+- YouTube playlist integration
+- Responsive user interface
 
 ## Technologies Used
 - HTML
