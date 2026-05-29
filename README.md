@@ -22,13 +22,17 @@ A web application that recommends music based on real-time weather conditions us
 - Spotify/YouTube playlist integration
 - AWS deployment
 - 
-##screenshots
+## Screenshots
+### Dashboard
 ![Dashboard](screenshots/dashboard.png)
 
+### Example 1 - Bhopal
 ![City1](screenshots/city1.png)
 
+###  Example 2-Hyderabad
 ![City2](screenshots/city2.png)
 
+### Example 3-Delhi
 ![City3](screenshots/city3.png)
 
 ## Author
