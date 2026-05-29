@@ -25,19 +25,19 @@ A web application that recommends music based on real-time weather conditions us
 - 
 ## Screenshots
 ### Example 1 - Delhi
-![City1](screenshots/city1.png)
+![City1](screenshots/city 1.png)
 
 ###  Example 2-Jhansi
-![City2](screenshots/city2.png)
+![City2](screenshots/city 2.png)
 
 ### Example 3-Hyderabad
-![City3](screenshots/city3.png)
+![City3](screenshots/city 3.png)
 
 ### Example 4-Bhopal
-![City3](screenshots/city3.png)
+![City4](screenshots/city 4.png)
 
 ### Example 5-Osaka
-![City3](screenshots/city3.png)
+![City5](screenshots/city 5.png)
 
 ## Author
 Prashasti Mathur
