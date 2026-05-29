@@ -21,6 +21,15 @@ A web application that recommends music based on real-time weather conditions us
 - Weather icons
 - Spotify/YouTube playlist integration
 - AWS deployment
+- 
+##screenshots
+![Dashboard](screenshots/dashboard.png)
+
+![City1](screenshots/city1.png)
+
+![City2](screenshots/city2.png)
+
+![City3](screenshots/city3.png)
 
 ## Author
 Prashasti Mathur
