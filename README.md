@@ -35,6 +35,20 @@ A web application that recommends music based on real-time weather conditions. T
 5. Save your favorite city for future visits.
 
 ## Screenshots
+### Home Screen
+![Home](screenshots/home.png)
+
+### Weather Recommendation
+![Delhi Weather](screenshots/delhi-weather.png)
+
+### Weather Recommendation for Another City
+![Jhansi Weather](screenshots/jhansi-weather.png)
+
+### Save Favorite City
+![Favorite City](screenshots/favorite-city.png)
+
+### Use Current Location
+![Location Feature](screenshots/location-feature.png)
 
 
 ## Future Improvements
