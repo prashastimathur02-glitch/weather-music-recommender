@@ -2,6 +2,10 @@
 
 A web application that recommends music based on real-time weather conditions. The app fetches live weather data using the OpenWeather API and suggests suitable music playlists according to the current weather and time of day.
 
+## Live Demo
+
+🔗 Live Project: https://prashastimathur02-glitch.github.io/weather-music-recommender/
+
 ## Features
 
 * 🌤️ Real-time weather data using OpenWeather API
