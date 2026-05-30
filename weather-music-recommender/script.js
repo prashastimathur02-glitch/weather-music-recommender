@@ -55,7 +55,7 @@ function changeBackground(weather, isDay) {
     if (weather.includes("clear")) {
         if (isDay) {
           document.body.style.background =
-          "linear-gradient(to right, #89f7fe, #66a6ff)";
+          "linear-gradient(to right, #3a7bd5, #3a6073)";
         } else {
             document.body.style.background =
                 "linear-gradient(to right, #141e30, #243b55)";
@@ -129,7 +129,6 @@ function getMusicRecommendation(weather, isDay) {
 
   return "🎵 Mixed Weather → Enjoy your favorite playlist";
 }
-
 async function getRecommendationButton() {
   const city = document.getElementById("cityInput").value.trim();
   const result = document.getElementById("result");
@@ -142,6 +141,7 @@ async function getRecommendationButton() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
 
   try {
+    result.innerHTML = "⏳ Loading weather...";
     const response = await fetch(url);
     const data = await response.json();
 
@@ -158,6 +158,8 @@ async function getRecommendationButton() {
     const weather = data.weather[0].main;
     const description = data.weather[0].description;
     const temp = data.main.temp;
+    const iconCode = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     const currentTime = data.dt;
     const sunrise = data.sys.sunrise;
@@ -171,27 +173,111 @@ async function getRecommendationButton() {
     const music = getMusicRecommendation(weather, isDay);
     const playlists = getPlaylistLinks(weather, isDay);
    result.innerHTML = `
-  <h2>📍 ${data.name}</h2>
+<div class="weather-card">
 
-  <p>${timeIcon} <strong>${timeText}</strong></p>
+  <div class="weather-header">
+    <h2>📍 ${data.name}</h2>
+    <p>${timeIcon} ${timeText}</p>
+  </div>
 
-  <p>☁️ ${description}</p>
+  <img src="${iconUrl}" alt="Weather Icon" class="weather-icon">
 
-  <p>🌡️ ${temp.toFixed(1)} °C</p>
+  <h3>${temp.toFixed(1)} °C</h3>
 
-  <hr>
+  <p class="weather-desc">${description}</p>
 
-  <h3>🎵 Music Recommendation</h3>
+</div>
+
+<div class="music-card">
+
+  <h3>🎵 Recommended Mood</h3>
 
   <p>${music}</p>
 
-  <div class="playlist-buttons">
-    <a href="${playlists.spotify}" target="_blank">🎧 Open Spotify</a>
-    <a href="${playlists.youtube}" target="_blank">▶️ Open YouTube</a>
+  <div class="tags">
+    <span>Lo-fi</span>
+    <span>Chill</span>
+    <span>Acoustic</span>
   </div>
+
+</div>
+
+<div class="action-card">
+
+  <h3>🎧 Listen Now</h3>
+
+  <div class="playlist-buttons">
+    <a href="${playlists.spotify}" target="_blank">Spotify</a>
+    <a href="${playlists.youtube}" target="_blank">YouTube</a>
+  </div>
+
+  <button class="save-btn" onclick="saveFavoriteCity('${data.name}')">
+    ⭐ Save Favorite City
+  </button>
+   <button class="remove-btn" onclick="removeFavoriteCity('${data.name}')">
+    🗑️ Remove Favorite City
+  </button>
+
+</div>
 `;
   } catch (error) {
     console.log(error);
     result.innerHTML = "Something went wrong. Check internet or API key.";
+  }
+}
+window.onload = function() {
+  const favoriteCity = localStorage.getItem("favoriteCity");
+
+  if (favoriteCity) {
+    document.getElementById("cityInput").value = favoriteCity;
+    saveFavoriteCity(data.name);
+    getRecommendationButton();
+  }
+};
+
+function saveFavoriteCity(city) {
+  localStorage.setItem("favoriteCity", city);
+  alert(city + " saved as favorite!");
+}
+
+function removeFavoriteCity() {
+  localStorage.removeItem("favoriteCity");
+  alert("Favorite city removed!");
+}
+const cityInput = document.getElementById("cityInput");
+
+cityInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    getRecommendationButton();
+  }
+});
+function getCurrentLocation() {
+  if (navigator.geolocation) {
+
+    navigator.geolocation.getCurrentPosition(
+      async function(position) {
+
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        const url =
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        document.getElementById("cityInput").value =
+          data.name;
+
+        getRecommendationButton();
+      },
+
+      function() {
+        alert("Location access denied.");
+      }
+    );
+
+  } else {
+    alert("Geolocation not supported.");
   }
 }

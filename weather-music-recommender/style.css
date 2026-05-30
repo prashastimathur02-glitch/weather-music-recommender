@@ -5,21 +5,28 @@ body {
   color: white;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
 
-.app-container {
+.app-container{
   width: 90%;
-  max-width: 600px;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 25px;
   background: rgba(255, 255, 255, 0.12);
-  padding: 35px;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 h1 {
-  margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
 .subtitle {
@@ -29,29 +36,35 @@ h1 {
 
 .search-box {
   display: flex;
-  gap: 10px;
   justify-content: center;
-  margin-bottom: 25px;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  flex-wrap: wrap;
 }
-
-input {
-  padding: 12px;
-  width: 60%;
+.search-box button {
+  height: 45px;
+  padding: 0 20px;
   border: none;
-  border-radius: 8px;
-  outline: none;
-}
-
-button {
-  padding: 12px 15px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #7c5cff;
   color: white;
+  font-size: 15px;
   cursor: pointer;
 }
 
-button:hover {
+#cityInput {
+  width: 260px;
+  height: 45px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+
+.search-box button:hover {
   background: #5f45d6;
 }
 
@@ -60,6 +73,10 @@ button:hover {
   padding: 20px;
   border-radius: 15px;
   min-height: 80px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 25px;
+
 }
 .playlist-buttons {
   margin-top: 18px;
@@ -82,4 +99,114 @@ button:hover {
 .playlist-buttons a:hover {
   background: #5f45d6;
   transform: scale(1.05);
+}
+
+.weather-icon {
+  width: 70px;
+  height: 50px;
+  margin: 5px auto;
+  display: block;
+}
+.save-btn {
+  margin-top: 15px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc70;
+  color: #222;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-btn:hover {
+  background: #ffb347;
+  transform: scale(1.05);
+}
+.remove-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #e74c3c;
+}
+.weather-card,
+.music-card,
+.action-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    min-height: 220px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-desc {
+    text-transform: capitalize;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tags span {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.playlist-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.playlist-buttons a {
+    text-decoration: none;
+    background: #7c5cff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.playlist-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.save-btn {
+    margin-top: 15px;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+#result {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 25px;
 }

@@ -10,11 +10,16 @@
 
   <div class="app-container">
     <h1>Weather Music Recommender 🎵</h1>
+    
     <p class="subtitle">Get music recommendations based on real-time weather.</p>
 
     <div class="search-box">
       <input type="text" id="cityInput" placeholder="Enter city name">
       <button onclick="getRecommendationButton()">Get Recommendation</button>
+       <button onclick="getCurrentLocation()">
+        📍 Use My Location
+      </button>
+    </div>
 
     <div id="result" class="result-card">
       <p>Enter a city name to get started.</p>
