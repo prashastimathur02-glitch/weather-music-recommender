@@ -1,43 +1,54 @@
-# Weather Music Recommender 🎵
+# Weather Music Recommender 🎵☀️
 
-A web application that recommends music based on real-time weather conditions using the OpenWeather API.
- ## Features
-- Real-time weather data using OpenWeather API
-- Weather-based music recommendations
-- Day and Night detection
-- Dynamic weather backgrounds
-- Spotify playlist integration
-- YouTube playlist integration
-- Responsive user interface
+A web application that recommends music based on real-time weather conditions. The app fetches live weather data using the OpenWeather API and suggests suitable music playlists according to the current weather and time of day.
+
+## Features
+
+* 🌤️ Real-time weather data using OpenWeather API
+* 🌙 Day/Night detection
+* 🎵 Weather-based music recommendations
+* 🎧 Spotify playlist integration
+* ▶️ YouTube playlist integration
+* 🎨 Dynamic weather backgrounds
+* 🌦️ Weather icons
+* ⭐ Save favorite city using Local Storage
+* 🗑️ Remove favorite city
+* ⌨️ Enter key support for quick search
+* 📍 Current location weather using Geolocation API
+* 📱 Responsive and modern UI
 
 ## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- OpenWeather API
-   
-##Future Improvements
-- Weather icons from OpenWeather API
-- Save favorite city (Local Storage)
-- Mobile optimization
-- AWS deployment
-- Live Spotify API integration
+
+* HTML
+* CSS
+* JavaScript
+* OpenWeather API
+* Browser Local Storage
+* Geolocation API
+
+## How to Use
+
+1. Enter a city name and click **Get Recommendation**.
+2. Or click **Use My Location** to get weather data automatically.
+3. View current weather information and recommended music.
+4. Open Spotify or YouTube playlists directly.
+5. Save your favorite city for future visits.
 
 ## Screenshots
-### Example 1 - Delhi
-![City1](screenshots/city1.png)
 
-###  Example 2-Jhansi
-![City2](screenshots/city2.png)
 
-### Example 3-Hyderabad
-![City3](screenshots/city3.png)
+## Future Improvements
 
-### Example 4-Bhopal
-![City4](screenshots/city4.png)
-
-### Example 5-Osaka
-![City5](screenshots/city5.png)
+* Deploy the project using GitHub Pages
+* Deploy the project on AWS EC2
+* Add 5-day weather forecast recommendations
+* Add recent search history
+* Add animated weather backgrounds
+* Integrate Spotify API for actual playlists
+* Add mood-based recommendations
+* Improve mobile responsiveness
+* Add dark/light mode toggle
 
 ## Author
+
 Prashasti Mathur
